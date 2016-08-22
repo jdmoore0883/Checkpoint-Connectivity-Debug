@@ -6,12 +6,12 @@ Installation
 =======================
 Note: Please be sure to install this script prior to any issues manifesting themselves
 
-1. Copy the connCheck.tgz compressed file to the gateway
-2. Decompress with command:
-[Expert@Host:0]# tar -zxvf connCheck.tgz
-3. Ensure it is executable:
-[Expert@Host:0]# chmod +x connCheck.sh
-4. You are ready to go!
+1. Download the script to your device:
+curl -Lk https://github.com/jdmoore0883/Checkpoint-Connectivity-Debug/raw/master/con_deb.sh -o con_deb.sh
+2. Make it executable:
+chmod +x con_deb.sh
+3. Run the script:
+./con_deb.sh
 
 =======================
 Usage
