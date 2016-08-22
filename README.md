@@ -21,7 +21,7 @@ this while the issue is occurring, otherwise, if the problem is not occurring,
 we will not see the problem.
 
 1. While the problem is occurring, you will need CLI access to the device.
-- SSH or Direct Console are both fine
+  - SSH or Direct Console are both fine
 2. CD to the folder with the script.
 3. Run the script:
 [Expert@Host:0]# ./connCheck.sh
