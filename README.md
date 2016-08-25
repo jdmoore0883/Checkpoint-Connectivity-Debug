@@ -24,7 +24,7 @@ we will not see the problem.
   - SSH or Direct Console are both fine
 2. CD to the folder with the script.
 3. Run the script:
-  - [Expert@Host:0]# ./connCheck.sh
+  - [Expert@Host:0]# ./con_deb.sh
 
 Note: The output file will be placed into the present working directory.
 	Ensure you run it from a folder with ample free space.
@@ -56,5 +56,6 @@ Details gathered includes (but not limited to) the following:
   - cphaprob
   - cpwd_admin list
   - /var/log/messages* files
+  - /var/log/routed_messages* files
   - complete connections table dump
   - all *.elg debug files
