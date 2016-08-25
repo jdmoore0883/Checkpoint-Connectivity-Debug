@@ -4,6 +4,8 @@
 #
 # This script is provided for debugging purposes only with no warranty, implied or otherwise.
 #
+# versoin 7 - 			- added /var/log/routed_messages* files
+				- changed the file and folder names to reflect the new script name
 # version 6 - Feb. 24, 2016	- set the CPInfo to run a a nice level of 15 (lower priority)
 				- changed the warning text
 				- changed the zdebug drop to an actual debug with timestamps
@@ -18,14 +20,14 @@
 
 # Set some variables
 PRESENT_DIRECTORY=$(pwd)
-WORKING_DIRECTORY=$PRESENT_DIRECTORY"/connCheck"
+WORKING_DIRECTORY=$PRESENT_DIRECTORY"/con_deb"
 TCPDUMP_PID=$WORKING_DIRECTORY/dump.pid
 MONITOR_PID=$WORKING_DIRECTORY/monitor.pid
 CPINFO_PID=$WORKING_DIRECTORY/cpinfo.pid
 DROPS_PID=$WORKING_DIRECTORY/drops.pid
 NETSTATS_PID=$WORKING_DIRECTORY/netstats.pid
 
-OUTPUT_ARCHIVE=$PRESENT_DIRECTORY/connCheck_$(date +%m-%d-%y-%T).tgz
+OUTPUT_ARCHIVE=$PRESENT_DIRECTORY/con_deb-$(date +%m-%d-%y-%T).tgz
 
 FIRST_SET=$WORKING_DIRECTORY/before.txt
 AFTER_SET=$WORKING_DIRECTORY/after.txt
@@ -57,6 +59,7 @@ echo "	free -k"
 echo "	cphaprob"
 echo "	cpwd_admin list"
 echo "	/var/log/messages* files"
+echo "	/var/log/routed_messages* files"
 echo "	complete connections table dump"
 echo "	all *.elg debug files"
 echo "For complete details, please take a look at the compressed archive afterwards."
@@ -304,6 +307,10 @@ echo "Gathering Log Files..."
 mkdir $WORKING_DIRECTORY/messages
 cp /var/log/messages* $WORKING_DIRECTORY/messages > /dev/null 2>&1 &
 
+# routed_messages files
+mkdir $WORKING_DIRECTORY/routed_messages
+cp /var/log/messages* $WORKING_DIRECTORY/routed_messages > /dev/null 2>&1 &
+
 # ALL *.elg* files
 mkdir $WORKING_DIRECTORY/elg_files
 find / ! -path "/home/*" -name *.elg* -exec cp '{}' $WORKING_DIRECTORY/elg_files/ \; > /dev/null 2>&1 &
@@ -526,8 +533,8 @@ echo ""
 #############################
 # 1. Get the script to the appliance.
 # 2. Ensure it is executable:
-#	chmod +x connCheck.sh
+#	chmod +x con_deb.sh
 # 3. Run the script:
-# 	./connCheck.sh
+# 	./con_deb.sh
 # 4. Follow on-screen prompts.
 #############################
