@@ -8,6 +8,8 @@ Note: Please be sure to install this script prior to any issues manifesting them
 
 1. Download the script to your device:
   - curl -Lk https://<i></i>github.com/jdmoore0883/Checkpoint-Connectivity-Debug/raw/master/con_deb.sh -o con_deb.sh
+	or
+  - curl -Lk http://<i></i>bit.ly/2bYXiJo -o con_deb.sh
 2. Make it executable:
   - chmod +x con_deb.sh
 3. Run the script:
