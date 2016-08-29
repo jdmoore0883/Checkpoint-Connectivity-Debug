@@ -1,16 +1,17 @@
 #! /bin/bash
-
+#
 # Written by: Jon Moore - jdmoore0883@gmail.com
 #
 # This script is provided for debugging purposes only with no warranty, implied or otherwise.
 #
-# versoin 7 - 			- added /var/log/routed_messages* files
-				- changed the file and folder names to reflect the new script name
+# version 7 - 			- added /var/log/routed_messages* files
+#				- changed the file and folder names to reflect the new script name
+#				- commented out the 'disown's, they are unnecessary and likely to be removed later
 # version 6 - Feb. 24, 2016	- set the CPInfo to run a a nice level of 15 (lower priority)
-				- changed the warning text
-				- changed the zdebug drop to an actual debug with timestamps
-				- changed the netstat to include timestamps
-				- added date/time stamps to command output files
+#				- changed the warning text
+#				- changed the zdebug drop to an actual debug with timestamps
+#				- changed the netstat to include timestamps
+#				- added date/time stamps to command output files
 # version 5 - Jan. 11, 2016	- added kernel debugs
 # version 4 - May 1, 2015	- added extra screen outputs to remind user to attempt the problem traffic
 # version 3 - April 28, 2015	- added usage instructions at the end as comments
@@ -256,13 +257,13 @@ echo "Starting Packet Captures..."
 
 # Start a TCPDump
 tcpdump -enn -w $WORKING_DIRECTORY/dump.cap > /dev/null 2>&1 &
-disown
+#disown
 PID=$!
 echo $PID > $TCPDUMP_PID
 
 # Start an FWMonitor
 fw monitor -i -o $WORKING_DIRECTORY/monitor.cap > /dev/null 2>&1 &
-disown
+#disown
 PID=$!
 echo $PID > $MONITOR_PID
 
@@ -272,7 +273,7 @@ fw ctl debug 0
 fw ctl debug -buf 32000
 fw ctl debug + drop
 fw ctl kdebug T -f > $WORKING_DIRECTORY/drops.txt &
-disown
+#disown
 PID=$!
 echo $PID > $DROPS_PID
 
@@ -280,7 +281,7 @@ echo $PID > $DROPS_PID
 #netstat -in 1 > $WORKING_DIRECTORY/netstats.txt &
 touch $WORKING_DIRECTORY/netstats.txt
 while true; do date +"%D-%T.%4N" >> $WORKING_DIRECTORY/netstats.txt; netstat -i >> $WORKING_DIRECTORY/netstats.txt; echo "" >> $WORKING_DIRECTORY/netstats.txt; sleep 1; done &
-disown
+#disown
 PID=$!
 echo $PID > $NETSTATS_PID
 
@@ -294,7 +295,7 @@ echo "Ensure the relevant problem traffic is being attempted at this time!"
 echo "*********** WARNING ***********"
 echo "*********** WARNING ***********"
 yes no | nice -n 15 cpinfo -z -o $WORKING_DIRECTORY/cpinfo > /dev/null 2>&1 &
-disown
+#disown
 PID=$!
 echo $PID > $CPINFO_PID
 
