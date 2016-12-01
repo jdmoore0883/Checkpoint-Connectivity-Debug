@@ -37,7 +37,7 @@ This script is meant to help troubleshoot connectivity problems. Please run this
 
 	Note: The output file will be placed into the present working directory.
 	
-		Ensure you run it from a folder with ample free space.
+	Ensure you run it from a folder with ample free space.
 
 3. At this time, you can do whatever you need to do to restore services if needed. This can include a reboot or any other kinds fo restarts as needed.
 
