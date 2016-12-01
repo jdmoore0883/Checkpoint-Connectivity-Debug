@@ -51,10 +51,10 @@ This script is provided for debugging purposes only with no warranty, implied or
 This script is for a Check Point Gaia Gateway ONLY.
   - It has not been tested on anything else.
 
-SecureXL will not be turned off by default. This can be changed by changing FWACCEL=false to FWACCEL=true
+SecureXL will not be turned off by default. This can be changed by changing 'FWACCEL=false' to 'FWACCEL=true'
   - This script will turn it off and back on again
 
-This script will not gather a CPInfo by default, but will do so at a lower priority if you change CPINFO=false to CPINFO=true
+This script will not gather a CPInfo by default, but will do so at a lower priority if you change 'CPINFO=false' to 'CPINFO=true'
   - This will use all availble CPU, but at a low priority
   - This may cause 100% CPU Usage warnings, but should not affect traffic
 
