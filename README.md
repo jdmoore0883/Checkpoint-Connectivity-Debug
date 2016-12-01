@@ -18,7 +18,9 @@ Install process:
 
 1. Download the script to your device:
   - curl -Lk https://<i></i>github.com/jdmoore0883/Checkpoint-Connectivity-Debug/raw/master/connCheck.sh -o /bin/connCheck.sh
+
 	or
+	
   - curl -Lk http://<i></i>bit.ly/2bYXiJo -o /bin/connCheck.sh
 2. Make it executable:
   - chmod +x /bin/connCheck.sh
