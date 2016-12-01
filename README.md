@@ -7,8 +7,11 @@ Installation
 Note: Please be sure to install this script PRIOR to any issues manifesting themselves
 
 There are 3 ways we can "install" this script for use by admins, and it all boils down to the "install" directory (in order of preference):
+
 1. We can set this up for use by ALL admins, use directory:	/bin
+
 2. We can set this up for use by SPECIFIC admins, use directory:	~/bin
+
 3. You can put it in any directory, so long as it is remembered when you want to run it.
 
 1. Download the script to your device:
