@@ -7,13 +7,13 @@ Installation
 Note: Please be sure to install this script prior to any issues manifesting themselves
 
 1. Download the script to your device:
-  - curl -Lk https://<i></i>github.com/jdmoore0883/Checkpoint-Connectivity-Debug/raw/master/con_deb.sh -o con_deb.sh
+  - curl -Lk https://<i></i>github.com/jdmoore0883/Checkpoint-Connectivity-Debug/raw/master/connCheck.sh -o connCheck.sh
 	or
-  - curl -Lk http://<i></i>bit.ly/2bYXiJo -o con_deb.sh
+  - curl -Lk http://<i></i>bit.ly/2bYXiJo -o connCheck.sh
 2. Make it executable:
-  - chmod +x con_deb.sh
+  - chmod +x connCheck.sh
 3. Run the script:
-  - ./con_deb.sh
+  - ./connCheck.sh
 
 =======================
 Usage
@@ -26,7 +26,7 @@ we will not see the problem.
   - SSH or Direct Console are both fine
 2. CD to the folder with the script.
 3. Run the script:
-  - [Expert@Host:0]# ./con_deb.sh
+  - [Expert@Host:0]# ./connCheck.sh
 
 Note: The output file will be placed into the present working directory.
 	Ensure you run it from a folder with ample free space.
