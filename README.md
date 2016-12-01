@@ -15,6 +15,7 @@ There are 3 ways we can "install" this script for use by admins, and it all boil
 3. You can put it in any directory, so long as it is remembered when you want to run it.
 
 Install process:
+
 1. Download the script to your device:
   - curl -Lk https://<i></i>github.com/jdmoore0883/Checkpoint-Connectivity-Debug/raw/master/connCheck.sh -o /bin/connCheck.sh
 	or
