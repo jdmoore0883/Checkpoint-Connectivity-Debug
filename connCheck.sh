@@ -1,6 +1,7 @@
 #! /bin/bash
 
-# Written by: Jon Moore - moorej@checkpoint.com
+# Written by: Jon Moore - jdmoore0883@gmail.com
+#			- http://jonmoore.duckdns.org
 #
 # This script is provided for debugging purposes only with no warranty, implied or otherwise.
 #
